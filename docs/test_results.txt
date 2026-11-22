@@ -1,0 +1,88 @@
+CRAY AutoTune - bateria de pruebas del DSP
+
+[1] Latencia por impulso (ratio=1). Live: retardo en reposo; Quality: retardo fijo. Todas las fs y bloques
+   44100 Hz Live    bloque  64:     4 muestras =  0.091 ms | PDC declarado   127 =  2.880 ms
+   44100 Hz Quality bloque  64:  1307 muestras = 29.637 ms | PDC declarado  1307 = 29.637 ms
+   44100 Hz Quality bloque 512:  1307 muestras = 29.637 ms | PDC declarado  1307 = 29.637 ms
+   48000 Hz Live    bloque  64:     4 muestras =  0.083 ms | PDC declarado   137 =  2.854 ms
+   48000 Hz Quality bloque  64:  1422 muestras = 29.625 ms | PDC declarado  1422 = 29.625 ms
+   48000 Hz Quality bloque 512:  1422 muestras = 29.625 ms | PDC declarado  1422 = 29.625 ms
+   88200 Hz Live    bloque  64:     4 muestras =  0.045 ms | PDC declarado   249 =  2.823 ms
+   88200 Hz Quality bloque  64:  2608 muestras = 29.569 ms | PDC declarado  2608 = 29.569 ms
+   88200 Hz Quality bloque 512:  2608 muestras = 29.569 ms | PDC declarado  2608 = 29.569 ms
+   96000 Hz Live    bloque  64:     4 muestras =  0.042 ms | PDC declarado   271 =  2.823 ms
+   96000 Hz Quality bloque  64:  2838 muestras = 29.562 ms | PDC declarado  2838 = 29.562 ms
+   96000 Hz Quality bloque 512:  2838 muestras = 29.562 ms | PDC declarado  2838 = 29.562 ms
+
+[2] Retardo REAL en Live mientras corrige (nota 35 cents alta, retune 5 ms): minimo/medio/maximo vs PDC declarado
+   44100 Hz Low Male    f0 122.5: retardo interno min    4.5 / medio  187.0 / max  363.9 muestras (0.10 / 4.24 / 8.25 ms) | PDC 204 (4.63 ms) | periodo 360.1
+      correlacion: lag 0..347, ventanas incoherentes con el retardo interno: 0/40
+   44100 Hz Alto/Tenor  f0 193.9: retardo interno min    4.1 / medio  119.5 / max  231.4 muestras (0.09 / 2.71 / 5.25 ms) | PDC 127 (2.88 ms) | periodo 227.5
+      correlacion: lag 0..214, ventanas incoherentes con el retardo interno: 0/40
+   44100 Hz Soprano     f0 326.5: retardo interno min    4.2 / medio   73.1 / max  139.0 muestras (0.10 / 1.66 / 3.15 ms) | PDC 78 (1.77 ms) | periodo 135.1
+      correlacion: lag 0..123, ventanas incoherentes con el retardo interno: 0/40
+   48000 Hz Low Male    f0 122.5: retardo interno min    4.5 / medio  203.0 / max  395.5 muestras (0.09 / 4.23 / 8.24 ms) | PDC 222 (4.62 ms) | periodo 392.0
+      correlacion: lag 0..379, ventanas incoherentes con el retardo interno: 0/40
+   48000 Hz Alto/Tenor  f0 193.9: retardo interno min    4.1 / medio  129.6 / max  251.3 muestras (0.08 / 2.70 / 5.23 ms) | PDC 137 (2.85 ms) | periodo 247.6
+      correlacion: lag 0..235, ventanas incoherentes con el retardo interno: 0/40
+   48000 Hz Soprano     f0 326.5: retardo interno min    4.0 / medio   78.9 / max  150.8 muestras (0.08 / 1.64 / 3.14 ms) | PDC 84 (1.75 ms) | periodo 147.0
+      correlacion: lag 0..143, ventanas incoherentes con el retardo interno: 0/40
+   88200 Hz Low Male    f0 122.5: retardo interno min    4.3 / medio  369.6 / max  724.0 muestras (0.05 / 4.19 / 8.21 ms) | PDC 405 (4.59 ms) | periodo 720.3
+      correlacion: lag 0..690, ventanas incoherentes con el retardo interno: 0/40
+   88200 Hz Alto/Tenor  f0 193.9: retardo interno min    4.2 / medio  234.8 / max  458.9 muestras (0.05 / 2.66 / 5.20 ms) | PDC 249 (2.82 ms) | periodo 454.9
+      correlacion: lag 11..262, ventanas incoherentes con el retardo interno: 0/40
+   88200 Hz Soprano     f0 326.5: retardo interno min    4.4 / medio  142.1 / max  273.9 muestras (0.05 / 1.61 / 3.11 ms) | PDC 151 (1.71 ms) | periodo 270.1
+      correlacion: lag 0..262, ventanas incoherentes con el retardo interno: 0/40
+   96000 Hz Low Male    f0 122.5: retardo interno min    4.4 / medio  402.2 / max  787.9 muestras (0.05 / 4.19 / 8.21 ms) | PDC 440 (4.58 ms) | periodo 784.0
+      correlacion: lag 0..753, ventanas incoherentes con el retardo interno: 0/40
+   96000 Hz Alto/Tenor  f0 193.9: retardo interno min    4.1 / medio  255.1 / max  498.9 muestras (0.04 / 2.66 / 5.20 ms) | PDC 271 (2.82 ms) | periodo 495.2
+      correlacion: lag 0..465, ventanas incoherentes con el retardo interno: 0/40
+   96000 Hz Soprano     f0 326.5: retardo interno min    4.1 / medio  154.2 / max  297.9 muestras (0.04 / 1.61 / 3.10 ms) | PDC 164 (1.71 ms) | periodo 294.0
+
+[3] Deteccion de tono (error en cents / voiced), correccion 0, todas las fs
+   44100 Hz: peor error 1.11 cents, fallos 0/9
+   48000 Hz: peor error 0.44 cents, fallos 0/9
+   88200 Hz: peor error 1.11 cents, fallos 0/9
+   96000 Hz: peor error 0.44 cents, fallos 0/9
+
+[4] Precision de afinacion (cromatica, snap 100%, retune 5 ms): error final en cents
+  Live     44100 Hz: peor error 0.37 cents
+  Live     48000 Hz: peor error 0.31 cents
+  Live     88200 Hz: peor error 0.38 cents
+  Live     96000 Hz: peor error 0.31 cents
+  Quality  44100 Hz: peor error 0.17 cents
+  Quality  48000 Hz: peor error 0.11 cents
+  Quality  88200 Hz: peor error 0.11 cents
+  Quality  96000 Hz: peor error 0.09 cents
+
+[5] Tiempo de respuesta (Live, 48k): correccion pasa de 0 a 100% con nota +40 cents; tiempo hasta error < 10 cents
+  retune     1 ms -> alcanza +-10 cents en   16.0 ms (medido con ventana de 16 ms; tiempo = fin de ventana)
+  retune    20 ms -> alcanza +-10 cents en   39.0 ms (medido con ventana de 16 ms; tiempo = fin de ventana)
+  retune    60 ms -> alcanza +-10 cents en   95.0 ms (medido con ventana de 16 ms; tiempo = fin de ventana)
+  retune   150 ms -> alcanza +-10 cents en  218.0 ms (medido con ventana de 16 ms; tiempo = fin de ventana)
+
+[6] Estabilidad: nota sostenida con deriva +-18 cents y vibrato +-40 cents @5.5 Hz; barrido A3->A#3
+  deriva    retune   5 ms: desviacion entrada 12.9 cents -> salida 0.5 cents
+  vibrato   retune   5 ms: desviacion entrada 30.7 cents -> salida 10.5 cents
+  vibrato   retune 150 ms: desviacion entrada 30.7 cents -> salida 29.0 cents
+  barrido lento de 1 semitono: 1 cambio(s) de nota en la salida (esperado 1)
+
+[7] Clics: salto maximo muestra a muestra salida/referencia
+  Live    max|dx| entrada 0.1151 salida 0.0718 relacion 0.62
+  Quality max|dx| entrada 0.1151 salida 0.0942 relacion 0.82
+
+[8] Robustez: silencio, ruido, bloques 1/7/1024/4096, mono vs estereo, cambios de parametros en reproduccion, bypass
+  mono vs estereo(L=R): diferencia maxima 0.00e+00
+  bypass: salida = entrada retardada 137 muestras, correlacion 1.0000
+
+[9/10] Asignaciones en el hilo de audio y CPU (estereo, bloque 64, 10 s de voz con vibrato)
+  Live     44100 Hz: CPU 3.2% de un nucleo | asignaciones 0
+  Live     48000 Hz: CPU 3.9% de un nucleo | asignaciones 0
+  Live     88200 Hz: CPU 3.3% de un nucleo | asignaciones 0
+  Live     96000 Hz: CPU 4.0% de un nucleo | asignaciones 0
+  Quality  44100 Hz: CPU 3.1% de un nucleo | asignaciones 0
+  Quality  48000 Hz: CPU 4.0% de un nucleo | asignaciones 0
+  Quality  88200 Hz: CPU 3.3% de un nucleo | asignaciones 0
+  Quality  96000 Hz: CPU 4.1% de un nucleo | asignaciones 0
+
+RESULTADO: TODO OK (0 fallos)
